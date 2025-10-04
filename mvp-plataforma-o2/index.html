@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma O2 - MVP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Plataforma O2</h1>
+    <p>Uma experiência mínima para praticar Organização Orgânica.</p>
+    <nav>
+      <button data-section="organizacao">Organização</button>
+      <button data-section="tensoes">Tensões</button>
+      <button data-section="reunioes">Interações</button>
+      <button data-section="biblioteca">Biblioteca de Padrões</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="organizacao" class="painel ativo">
+      <h2>Estrutura Organizacional</h2>
+      <div class="grid">
+        <div>
+          <h3>Círculos</h3>
+          <ul id="lista-circulos" class="lista"></ul>
+          <form id="form-circulo" class="formulario">
+            <h4>Adicionar círculo</h4>
+            <label>
+              Nome
+              <input type="text" name="nome" required />
+            </label>
+            <label>
+              Propósito
+              <textarea name="proposito" rows="2" required></textarea>
+            </label>
+            <button type="submit">Salvar círculo</button>
+          </form>
+        </div>
+        <div>
+          <h3>Papéis</h3>
+          <ul id="lista-papeis" class="lista"></ul>
+          <form id="form-papel" class="formulario">
+            <h4>Adicionar papel</h4>
+            <label>
+              Nome
+              <input type="text" name="nome" required />
+            </label>
+            <label>
+              Círculo
+              <select name="circulo" required></select>
+            </label>
+            <label>
+              Responsabilidades
+              <textarea name="responsabilidades" rows="3" required></textarea>
+            </label>
+            <label>
+              Artefatos
+              <textarea name="artefatos" rows="2"></textarea>
+            </label>
+            <label>
+              Parceira energizando
+              <input type="text" name="parceira" placeholder="Nome da pessoa" />
+            </label>
+            <button type="submit">Salvar papel</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="tensoes" class="painel">
+      <h2>Tensões criativas</h2>
+      <p>Capture oportunidades de melhoria e direcione-as para a interação adequada.</p>
+      <ul id="lista-tensoes" class="lista"></ul>
+      <form id="form-tensao" class="formulario">
+        <h3>Registrar tensão</h3>
+        <label>
+          Título
+          <input type="text" name="titulo" required />
+        </label>
+        <label>
+          Descrição
+          <textarea name="descricao" rows="3" required></textarea>
+        </label>
+        <label>
+          Tipo de interação
+          <select name="interacao" required>
+            <option value="Revisar">Revisar</option>
+            <option value="Sincronizar">Sincronizar</option>
+            <option value="Adaptar">Adaptar</option>
+            <option value="Cuidar">Cuidar</option>
+          </select>
+        </label>
+        <label>
+          Papel afetado
+          <select name="papel"></select>
+        </label>
+        <button type="submit">Registrar tensão</button>
+      </form>
+    </section>
+
+    <section id="reunioes" class="painel">
+      <h2>Interações do círculo</h2>
+      <div class="grid">
+        <div>
+          <h3>Agenda tática</h3>
+          <ol id="lista-agenda" class="lista"></ol>
+          <form id="form-agenda" class="formulario">
+            <h4>Adicionar item de agenda</h4>
+            <label>
+              Descrição
+              <textarea name="descricao" rows="2" required></textarea>
+            </label>
+            <label>
+              Tensão vinculada
+              <select name="tensao"></select>
+            </label>
+            <button type="submit">Adicionar à agenda</button>
+          </form>
+        </div>
+        <div>
+          <h3>Decisões</h3>
+          <ul id="lista-decisoes" class="lista"></ul>
+          <form id="form-decisao" class="formulario">
+            <h4>Registrar decisão integrativa</h4>
+            <label>
+              Resultado
+              <textarea name="resultado" rows="3" required></textarea>
+            </label>
+            <label>
+              Tensões integradas
+              <select name="tensao"></select>
+            </label>
+            <label>
+              Próximos passos
+              <textarea name="proximosPassos" rows="2"></textarea>
+            </label>
+            <button type="submit">Salvar decisão</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="biblioteca" class="painel">
+      <h2>Padrões do O2</h2>
+      <article class="card">
+        <h3>Revisão Tática</h3>
+        <p>Checklist, métricas e projetos ativos do círculo para manter a cadência e a clareza dos compromissos.</p>
+      </article>
+      <article class="card">
+        <h3>Priorização Bimodal</h3>
+        <p>Compare alternativas usando a heurística “X mais que Y” para orientar decisões rápidas sem perder o contexto.</p>
+      </article>
+      <article class="card">
+        <h3>Atos Heróicos</h3>
+        <p>Documente exceções temporárias que precisam ser revisitadas para evoluir as restrições do círculo.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <small>Dados armazenados localmente no seu navegador. MVP - v0.1</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
