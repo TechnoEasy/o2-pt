@@ -24,3 +24,7 @@ Qualquer pessoa pode propor mudanças nos Meta-Acordos enviando pull requests. A
 [Aqui você pode encontrar maiores informações sobre a licença](license.md).
 
 _O2 is currently developed in Portuguese, as most of the contributors are Brazilians. Each release is translated to English, and is available in_ [_another repo_](https://github.com/targetteal/organic-organization-translations/)_._
+
+## Plataforma MVP
+
+Para experimentar a prática da O2 em formato digital, utilize o protótipo inicial disponível em [`mvp-plataforma-o2/`](mvp-plataforma-o2/). Basta abrir o arquivo `index.html` em um navegador moderno para cadastrar círculos, papéis, tensões e decisões com persistência local no dispositivo.
